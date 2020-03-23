@@ -1,25 +1,79 @@
+@charset "UTF-8";
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
 
 body {
+  font-family: 'Noto Sans JP', sans-serif;
   background-color: #fff;
+  width: 1440px;
+  line-height: 1.0;
 }
+
+.c-logo {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 200;
+}
+
 
 /* header ↓*/
 
 header {
-  background-color: #e5e5e5;
-  padding: 24px;
+  position: relative;
+  height: 800px;
+  color: #fff;
+  background-image: url(../image/cow.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  letter-spacing: 0.02em;
+}
+
+.c-menu {
+  height: 80px;
+  margin: 0 80px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
-.c-logo {
+.c-logo.-header {
+  font-size: 24px;
+}
+
+header .c-navlist li {
+  display: inline-block;
+  margin-right: 32px;
+  font-size: 12px;
+}
+
+.c-link {
+  color: #fff;
+  text-decoration-line: none;
+}
+
+.c-hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  text-align: center;
+}
+
+.c-logo.-hero {
   margin: 0;
-  font-size: 48px;
+  font-size: 72px;
 }
 
-.c-navlist li {
+.c-hero p {
+  margin: 40px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
 
+.c-hero button {
+  width: 400px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* header ↑*/
@@ -27,10 +81,14 @@ header {
 
 /* main ↓ */
 
+main {
+  background-color: #fdfdfd;
+  padding: 80px;
+}
+
 .c-section {
   font-family: sans-serif;
   box-sizing: border-box;
-  margin: 80px 76px;
 }
 
 .c-title {
@@ -41,20 +99,21 @@ header {
 
 .innerWrap {
   display: flex;
-  width: 1288px;
+  width: 1280px;
   justify-content: space-between;
 }
 
 .c-inner {
-  width: 408px;
+  width: 400px;
   height: 559px;
+  background-color: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   padding: 24px;
 }
 
 .c-inner img {
-  width: 360px;
+  width: 352px;
   height: 240px;
 }
 
@@ -87,15 +146,14 @@ header {
 }
 
 .c-text {
-  width: 360px;
-  height: 140px;
+  /* width: 360px; */
   color: #4f4f4f;
   font-size: 14px;
   line-height: 1.4;
 }
 
 .c-details {
-  margin-top: 31px;
+  margin-top: 11px;
   display: block;
   text-align: right;
   font-size: 16px;
@@ -107,7 +165,32 @@ header {
 
 /* footer ↓*/
 
+footer {
+  padding: 80px 0 39px;
+  text-align: center;
+  box-shadow: inset 0px 1px 0px #eee;
+  letter-spacing: 0.02em;
+}
 
+footer .c-navlist li {
+  display: inline-block;
+  margin-right: 32px;
+  font-size: 16px;
+}
+
+footer .c-link {
+  color: #000;
+  text-decoration-line: none;
+}
+
+.c-logo.-footer {
+  font-size: 40px;
+  margin: 80px 0 41px;
+}
+
+.c-copyright {
+  font-size: 10px;
+}
 
 /* footer ↑*/
 
