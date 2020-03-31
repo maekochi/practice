@@ -1,12 +1,13 @@
 @charset "UTF-8";
 
+/* font-family 'Noto Sans JP' */
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
 
 
 body {
   font-family: 'Noto Sans JP', sans-serif;
   background-color: #fff;
-  width: 1440px;
+  width: 100%;
   line-height: 1.0;
 }
 
@@ -18,14 +19,18 @@ body {
 
 /* header ↓*/
 
-header {
-  position: relative;
+.c-header {
+  /* position: relative;
   height: 800px;
   color: #fff;
   background-image: url(../image/cow.png);
   background-size: cover;
   background-repeat: no-repeat;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.02em; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .c-menu {
@@ -38,9 +43,10 @@ header {
 
 .c-logo.-header {
   font-size: 24px;
+  color: #fff;
 }
 
-header .c-navlist li {
+.c-navlist li {
   display: inline-block;
   margin-right: 32px;
   font-size: 12px;
@@ -51,12 +57,33 @@ header .c-navlist li {
   text-decoration-line: none;
 }
 
+
+/* header ↑*/
+
+
+/* main ↓ */
+
+.c-main {
+  background-color: #fdfdfd;
+}
+.heroWrap {
+  height: 800px;
+  background-image: url(../image/cow.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
 .c-hero {
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%); */
+  color: #fff;
   text-align: center;
+  letter-spacing: 0.02em;
 }
 
 .c-logo.-hero {
@@ -70,24 +97,17 @@ header .c-navlist li {
   line-height: 1.6;
 }
 
-.c-hero button {
+.c-hero .c-link {
+  display: inline-block;
+  font-size: 18px;
   width: 400px;
   height: 60px;
+  line-height: 60px;
+  border: 1px solid #fff;
   background-color: rgba(255, 255, 255, 0.1);
 }
-
-/* header ↑*/
-
-
-/* main ↓ */
-
-main {
-  background-color: #fdfdfd;
-  padding: 80px;
-}
-
 .c-section {
-  font-family: sans-serif;
+  padding: 80px;
   box-sizing: border-box;
 }
 
@@ -99,22 +119,62 @@ main {
 
 .innerWrap {
   display: flex;
-  width: 1280px;
-  justify-content: space-between;
 }
 
 .c-inner {
-  width: 400px;
-  height: 559px;
+  height: auto;
   background-color: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   padding: 24px;
 }
+/* スマートフォン用CSS ↓ */
+@media (max-width: 767px) {
+
+  .c-menu {
+    margin: 0 5px;
+  }
+
+  .c-header .c-navlist li {
+    margin-right: 3px;
+  }
+
+  .c-hero .c-link {
+    width: 300px;
+  }
+
+  .c-section {
+    padding: 30px;
+  }
+
+  .innerWrap {
+    flex-direction: column;
+  }
+  
+  .c-inner {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+}
+
+/* PC用CSS ↓ */
+@media (min-width: 768px) {
+
+  .innerWrap {
+    justify-content: space-between;
+  }
+  
+  .c-inner {
+    width: calc(100% / 3 - 20px);
+  }
+
+}
+
 
 .c-inner img {
-  width: 352px;
-  height: 240px;
+  width: 100%;
+  height: auto;
 }
 
 /* 新着記事　New ↓*/
@@ -146,7 +206,6 @@ main {
 }
 
 .c-text {
-  /* width: 360px; */
   color: #4f4f4f;
   font-size: 14px;
   line-height: 1.4;
@@ -165,22 +224,19 @@ main {
 
 /* footer ↓*/
 
-footer {
+.c-footer {
   padding: 80px 0 39px;
   text-align: center;
   box-shadow: inset 0px 1px 0px #eee;
   letter-spacing: 0.02em;
 }
 
-footer .c-navlist li {
-  display: inline-block;
-  margin-right: 32px;
+.c-navlist.-footer li {
   font-size: 16px;
 }
 
-footer .c-link {
+.c-navlist.-footer li .c-link {
   color: #000;
-  text-decoration-line: none;
 }
 
 .c-logo.-footer {
