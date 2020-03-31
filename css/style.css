@@ -1,36 +1,114 @@
+@charset "UTF-8";
+
+/* font-family 'Noto Sans JP' */
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
 
 body {
+  font-family: 'Noto Sans JP', sans-serif;
   background-color: #fff;
-}
-
-/* header ↓*/
-
-header {
-  background-color: #e5e5e5;
-  padding: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 100%;
+  line-height: 1.0;
 }
 
 .c-logo {
-  margin: 0;
-  font-size: 48px;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 200;
+}
+
+
+/* header ↓*/
+
+.c-header {
+  /* position: relative;
+  height: 800px;
+  color: #fff;
+  background-image: url(../image/cow.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  letter-spacing: 0.02em; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.c-menu {
+  height: 80px;
+  margin: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c-logo.-header {
+  font-size: 24px;
+  color: #fff;
 }
 
 .c-navlist li {
-
+  display: inline-block;
+  margin-right: 32px;
+  font-size: 12px;
 }
+
+.c-link {
+  color: #fff;
+  text-decoration-line: none;
+}
+
 
 /* header ↑*/
 
 
 /* main ↓ */
 
+.c-main {
+  background-color: #fdfdfd;
+}
+.heroWrap {
+  height: 800px;
+  background-image: url(../image/cow.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.c-hero {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%); */
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.c-logo.-hero {
+  margin: 0;
+  font-size: 72px;
+}
+
+.c-hero p {
+  margin: 40px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.c-hero .c-link {
+  display: inline-block;
+  font-size: 18px;
+  width: 400px;
+  height: 60px;
+  line-height: 60px;
+  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
 .c-section {
-  font-family: sans-serif;
+  padding: 80px;
   box-sizing: border-box;
-  margin: 80px 76px;
 }
 
 .c-title {
@@ -41,21 +119,62 @@ header {
 
 .innerWrap {
   display: flex;
-  width: 1288px;
-  justify-content: space-between;
 }
 
 .c-inner {
-  width: 408px;
-  height: 559px;
+  height: auto;
+  background-color: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   padding: 24px;
 }
+/* スマートフォン用CSS ↓ */
+@media (max-width: 767px) {
+
+  .c-menu {
+    margin: 0 5px;
+  }
+
+  .c-header .c-navlist li {
+    margin-right: 3px;
+  }
+
+  .c-hero .c-link {
+    width: 300px;
+  }
+
+  .c-section {
+    padding: 30px;
+  }
+
+  .innerWrap {
+    flex-direction: column;
+  }
+  
+  .c-inner {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+}
+
+/* PC用CSS ↓ */
+@media (min-width: 768px) {
+
+  .innerWrap {
+    justify-content: space-between;
+  }
+  
+  .c-inner {
+    width: calc(100% / 3 - 20px);
+  }
+
+}
+
 
 .c-inner img {
-  width: 360px;
-  height: 240px;
+  width: 100%;
+  height: auto;
 }
 
 /* 新着記事　New ↓*/
@@ -87,15 +206,13 @@ header {
 }
 
 .c-text {
-  width: 360px;
-  height: 140px;
   color: #4f4f4f;
   font-size: 14px;
   line-height: 1.4;
 }
 
 .c-details {
-  margin-top: 31px;
+  margin-top: 11px;
   display: block;
   text-align: right;
   font-size: 16px;
@@ -107,7 +224,29 @@ header {
 
 /* footer ↓*/
 
+.c-footer {
+  padding: 80px 0 39px;
+  text-align: center;
+  box-shadow: inset 0px 1px 0px #eee;
+  letter-spacing: 0.02em;
+}
 
+.c-navlist.-footer li {
+  font-size: 16px;
+}
+
+.c-navlist.-footer li .c-link {
+  color: #000;
+}
+
+.c-logo.-footer {
+  font-size: 40px;
+  margin: 80px 0 41px;
+}
+
+.c-copyright {
+  font-size: 10px;
+}
 
 /* footer ↑*/
 
